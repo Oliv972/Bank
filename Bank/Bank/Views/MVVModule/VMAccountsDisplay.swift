@@ -115,6 +115,7 @@ public final class VMAccountsProvider{
         self.vc?.onStatus(newstate: .updated, message: nil)
 
     }
+    
 
     func extractData(from BanksRawData : [AccountList])->[UICellInfo]{
         var extractedData : [UICellInfo] = []
