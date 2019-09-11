@@ -90,7 +90,9 @@ public final class VMAccountsProvider{
             let isCA = bank_info.isCA.boolValue
             return isCA
         }
-        return filtred_list
+        return filtred_list.sorted(by: { (obj1, obj2) -> Bool in
+            return obj1.title.lowercased() < obj2.title.lowercased()
+        })
     }
     
     private func getOtherAccounts()->([AccountList]){
@@ -101,7 +103,9 @@ public final class VMAccountsProvider{
             let isCA = !bank_info.isCA.boolValue
             return isCA
         }
-        return filtred_list
+        return filtred_list.sorted(by: { (obj1, obj2) -> Bool in
+            return obj1.title.lowercased() < obj2.title.lowercased()
+        })
     }    
     
     public func loadDataForViewController(){
