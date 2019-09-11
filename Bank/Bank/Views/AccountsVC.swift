@@ -20,6 +20,7 @@ public class AccountsVC : UIViewController{
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Mes comptes"
         self.accountsProvider = VMAccountsProvider(with: self)
     }
     @IBAction func actionButton(_ sender: UIButton) {
@@ -60,7 +61,9 @@ extension AccountsVC  : UITableViewDataSource{
             viewmodel.onTapOnBank(id: data.idBank)
         }else{
             //Go To account detail
-            viewmodel.onTapAccountDetail(id: data.idAccount)
+            viewmodel.onTapAccountDetail(idBank: data.idBank, idAccount: data.idAccount)            
+            
+           
         }
     }
     
@@ -127,6 +130,13 @@ extension AccountsVC  : UITableViewDataSource{
 }
 
 extension AccountsVC :  VMAccountsRenderer {
+    func onTapOnDetail(account: Account) {
+        let newView = self.storyboard?.instantiateViewController(withIdentifier: "AccountDetailVC") as! AccountDetailVC
+        newView.account = account
+        self.navigationController?.pushViewController(newView, animated: true)
+    }
+    
+    
     func onStatus(newstate: VMStatus, message: String?) {
     
         OperationQueue.main.addOperation {

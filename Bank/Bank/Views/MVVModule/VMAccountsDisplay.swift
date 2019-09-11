@@ -18,6 +18,7 @@ enum VMStatus{
 
 protocol VMAccountsRenderer where Self : UIViewController{
     func onStatus(newstate : VMStatus, message : String?)
+    func onTapOnDetail(account : Account)
 }
 
 
@@ -162,11 +163,24 @@ public final class VMAccountsProvider{
         }
         self.loadDataForViewController()
     }
-    func onTapAccountDetail(id : String?){
+    func onTapAccountDetail(idBank : String?, idAccount : String?){
         //Go to detail operation
-       
-        
+        guard let raw_accountData = self.raw_accounts else{
+            return
+        }
+        for bank in raw_accountData {
+            if bank.id == idBank{
+                guard let raw_accounts = bank.accounts else{
+                    return
+                }
+                for account in raw_accounts {
+                    if account.id == idAccount{
+                        self.vc?.onTapOnDetail(account: account)
+                        break
+                    }
+                }
+                break
+            }
+        }
     }
-    
-    
 }
