@@ -12,6 +12,9 @@
 		3FE7E0DC2328E013001AE272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7E0DA2328E013001AE272 /* Main.storyboard */; };
 		3FE7E0DE2328E015001AE272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7E0DD2328E015001AE272 /* Assets.xcassets */; };
 		3FE7E0E12328E015001AE272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7E0DF2328E015001AE272 /* LaunchScreen.storyboard */; };
+		3FE7E0EC2328ECA7001AE272 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0EB2328ECA7001AE272 /* Store.swift */; };
+		3FE7E0EE2328ECD3001AE272 /* AccountsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0ED2328ECD3001AE272 /* AccountsVC.swift */; };
+		3FE7E0F02328ECDF001AE272 /* AccountDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		3FE7E0DD2328E015001AE272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FE7E0E02328E015001AE272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FE7E0E22328E015001AE272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE7E0EB2328ECA7001AE272 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		3FE7E0ED2328ECD3001AE272 /* AccountsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsVC.swift; sourceTree = "<group>"; };
+		3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 		3FE7E0D52328E013001AE272 /* Bank */ = {
 			isa = PBXGroup;
 			children = (
+				3FE7E0EA2328EC94001AE272 /* Services */,
+				3FE7E0E92328EC8D001AE272 /* Modele */,
+				3FE7E0E82328EC82001AE272 /* Views */,
 				3FE7E0D62328E013001AE272 /* AppDelegate.swift */,
 				3FE7E0D82328E013001AE272 /* ViewController.swift */,
 				3FE7E0DA2328E013001AE272 /* Main.storyboard */,
@@ -62,6 +71,30 @@
 				3FE7E0E22328E015001AE272 /* Info.plist */,
 			);
 			path = Bank;
+			sourceTree = "<group>";
+		};
+		3FE7E0E82328EC82001AE272 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FE7E0ED2328ECD3001AE272 /* AccountsVC.swift */,
+				3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3FE7E0E92328EC8D001AE272 /* Modele */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modele;
+			sourceTree = "<group>";
+		};
+		3FE7E0EA2328EC94001AE272 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3FE7E0EB2328ECA7001AE272 /* Store.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE7E0EE2328ECD3001AE272 /* AccountsVC.swift in Sources */,
+				3FE7E0EC2328ECA7001AE272 /* Store.swift in Sources */,
+				3FE7E0F02328ECDF001AE272 /* AccountDetailVC.swift in Sources */,
 				3FE7E0D92328E013001AE272 /* ViewController.swift in Sources */,
 				3FE7E0D72328E013001AE272 /* AppDelegate.swift in Sources */,
 			);
