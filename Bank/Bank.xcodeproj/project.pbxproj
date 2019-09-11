@@ -21,6 +21,7 @@
 		3FE7E0F9232911A4001AE272 /* Int+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0F8232911A4001AE272 /* Int+Bool.swift */; };
 		3FE7E0FC23292F53001AE272 /* BankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0FB23292F53001AE272 /* BankCell.swift */; };
 		3FE7E0FE2329374A001AE272 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0FD2329374A001AE272 /* AccountCell.swift */; };
+		3FE7E10023293ACB001AE272 /* String+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0FF23293ACB001AE272 /* String+Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		3FE7E0F8232911A4001AE272 /* Int+Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Bool.swift"; sourceTree = "<group>"; };
 		3FE7E0FB23292F53001AE272 /* BankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCell.swift; sourceTree = "<group>"; };
 		3FE7E0FD2329374A001AE272 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		3FE7E0FF23293ACB001AE272 /* String+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Currency.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE7E0F8232911A4001AE272 /* Int+Bool.swift */,
+				3FE7E0FF23293ACB001AE272 /* String+Currency.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				3FE7E0F02328ECDF001AE272 /* AccountDetailVC.swift in Sources */,
 				3FE7E0FC23292F53001AE272 /* BankCell.swift in Sources */,
 				3FE7E0D92328E013001AE272 /* ViewController.swift in Sources */,
+				3FE7E10023293ACB001AE272 /* String+Currency.swift in Sources */,
 				3FE7E0FE2329374A001AE272 /* AccountCell.swift in Sources */,
 				3FE7E0D72328E013001AE272 /* AppDelegate.swift in Sources */,
 			);

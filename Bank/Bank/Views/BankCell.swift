@@ -10,10 +10,7 @@ import Foundation
 import UIKit
 
 public class BankCell : UITableViewCell{
-    
     @IBOutlet weak var label_info: UILabel!
     @IBOutlet weak var label_amount: UILabel!
     @IBOutlet weak var image_cheron: UIImageView!
-
-
 }

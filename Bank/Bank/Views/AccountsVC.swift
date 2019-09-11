@@ -32,7 +32,7 @@ public class AccountsVC : UIViewController{
 extension AccountsVC  : UITableViewDelegate  {
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0{
-            return "Credit Agricole"
+            return "Crédit Agricole"
         }else {
             return "Autres Banques"
         }
@@ -45,6 +45,26 @@ extension AccountsVC  : UITableViewDelegate  {
 }
 
 extension AccountsVC  : UITableViewDataSource{
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewmodel = self.accountsProvider else{
+            return
+        }
+        var data : UICellInfo
+        if indexPath.section == 0{
+            data = viewmodel.tableviewCAData[indexPath.row]
+        }else {
+             data = viewmodel.tableviewOtherData[indexPath.row]
+        }
+        if data.isBankCell {
+            //ExpandBankCell
+            viewmodel.onTapOnBank(id: data.idBank)
+        }else{
+            //Go To account detail
+            viewmodel.onTapAccountDetail(id: data.idAccount)
+        }
+    }
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         guard let viewmodel = self.accountsProvider else{ return 0 }
