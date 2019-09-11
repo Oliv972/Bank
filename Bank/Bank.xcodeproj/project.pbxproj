@@ -15,6 +15,12 @@
 		3FE7E0EC2328ECA7001AE272 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0EB2328ECA7001AE272 /* Store.swift */; };
 		3FE7E0EE2328ECD3001AE272 /* AccountsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0ED2328ECD3001AE272 /* AccountsVC.swift */; };
 		3FE7E0F02328ECDF001AE272 /* AccountDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */; };
+		3FE7E0F32328F0AC001AE272 /* StateEnvironnement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0F22328F0AC001AE272 /* StateEnvironnement.swift */; };
+		3FE7E0F52328F3E2001AE272 /* BankInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0F42328F3E2001AE272 /* BankInfos.swift */; };
+		3FE7E0F72328F540001AE272 /* VMAccountsDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0F62328F540001AE272 /* VMAccountsDisplay.swift */; };
+		3FE7E0F9232911A4001AE272 /* Int+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0F8232911A4001AE272 /* Int+Bool.swift */; };
+		3FE7E0FC23292F53001AE272 /* BankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0FB23292F53001AE272 /* BankCell.swift */; };
+		3FE7E0FE2329374A001AE272 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0FD2329374A001AE272 /* AccountCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		3FE7E0EB2328ECA7001AE272 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		3FE7E0ED2328ECD3001AE272 /* AccountsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsVC.swift; sourceTree = "<group>"; };
 		3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailVC.swift; sourceTree = "<group>"; };
+		3FE7E0F22328F0AC001AE272 /* StateEnvironnement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateEnvironnement.swift; sourceTree = "<group>"; };
+		3FE7E0F42328F3E2001AE272 /* BankInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInfos.swift; sourceTree = "<group>"; };
+		3FE7E0F62328F540001AE272 /* VMAccountsDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMAccountsDisplay.swift; sourceTree = "<group>"; };
+		3FE7E0F8232911A4001AE272 /* Int+Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Bool.swift"; sourceTree = "<group>"; };
+		3FE7E0FB23292F53001AE272 /* BankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCell.swift; sourceTree = "<group>"; };
+		3FE7E0FD2329374A001AE272 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 		3FE7E0D52328E013001AE272 /* Bank */ = {
 			isa = PBXGroup;
 			children = (
+				3FE7E0FA232911BE001AE272 /* Extensions */,
 				3FE7E0EA2328EC94001AE272 /* Services */,
 				3FE7E0E92328EC8D001AE272 /* Modele */,
 				3FE7E0E82328EC82001AE272 /* Views */,
@@ -76,8 +89,11 @@
 		3FE7E0E82328EC82001AE272 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3FE7E0F12328EE1D001AE272 /* MVVModule */,
 				3FE7E0ED2328ECD3001AE272 /* AccountsVC.swift */,
 				3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */,
+				3FE7E0FB23292F53001AE272 /* BankCell.swift */,
+				3FE7E0FD2329374A001AE272 /* AccountCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +101,7 @@
 		3FE7E0E92328EC8D001AE272 /* Modele */ = {
 			isa = PBXGroup;
 			children = (
+				3FE7E0F42328F3E2001AE272 /* BankInfos.swift */,
 			);
 			path = Modele;
 			sourceTree = "<group>";
@@ -93,8 +110,25 @@
 			isa = PBXGroup;
 			children = (
 				3FE7E0EB2328ECA7001AE272 /* Store.swift */,
+				3FE7E0F22328F0AC001AE272 /* StateEnvironnement.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		3FE7E0F12328EE1D001AE272 /* MVVModule */ = {
+			isa = PBXGroup;
+			children = (
+				3FE7E0F62328F540001AE272 /* VMAccountsDisplay.swift */,
+			);
+			path = MVVModule;
+			sourceTree = "<group>";
+		};
+		3FE7E0FA232911BE001AE272 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3FE7E0F8232911A4001AE272 /* Int+Bool.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,10 +202,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE7E0F9232911A4001AE272 /* Int+Bool.swift in Sources */,
+				3FE7E0F32328F0AC001AE272 /* StateEnvironnement.swift in Sources */,
 				3FE7E0EE2328ECD3001AE272 /* AccountsVC.swift in Sources */,
 				3FE7E0EC2328ECA7001AE272 /* Store.swift in Sources */,
+				3FE7E0F72328F540001AE272 /* VMAccountsDisplay.swift in Sources */,
+				3FE7E0F52328F3E2001AE272 /* BankInfos.swift in Sources */,
 				3FE7E0F02328ECDF001AE272 /* AccountDetailVC.swift in Sources */,
+				3FE7E0FC23292F53001AE272 /* BankCell.swift in Sources */,
 				3FE7E0D92328E013001AE272 /* ViewController.swift in Sources */,
+				3FE7E0FE2329374A001AE272 /* AccountCell.swift in Sources */,
 				3FE7E0D72328E013001AE272 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

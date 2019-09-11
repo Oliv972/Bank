@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+
+public final class Store {
+    
+    static var shared : Store = Store()
+    
+    var State_Environnement : EnvironnementProtocol = Production()
+
+}
