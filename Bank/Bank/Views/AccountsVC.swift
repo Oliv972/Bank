@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 
-
 public class AccountsVC : UIViewController{
     
     var accountsProvider : VMAccountsProvider?
