@@ -22,10 +22,13 @@ protocol VMAccountsRenderer where Self : UIViewController{
 
 
 public struct UICellInfo{
+    var idBank : String? = nil
+    var idAccount : String? = nil
+    var idOperation : String? = nil
+    
     var title  : String
     var amount : String
     var isBankCell : Bool
-    var isExpanded : Bool
 }
 
 public final class VMAccountsProvider{
@@ -38,6 +41,8 @@ public final class VMAccountsProvider{
     
     public var tableviewCAData    : [UICellInfo] = []
     public var tableviewOtherData : [UICellInfo] = []
+    
+    private var currentSelectedBank : String? = ""
 
     
     init(with viewcontroller : VMAccountsRenderer) {
@@ -69,8 +74,6 @@ public final class VMAccountsProvider{
                 let decoder = JSONDecoder()
                 self.raw_accounts = try decoder.decode([AccountList].self, from: data)
                 self.loadDataForViewController()
-                self.vc?.onStatus(newstate: .updated, message: nil)
-                
             } catch  {
                 let string_error = error.localizedDescription
                 self.vc?.onStatus(newstate: .error, message: string_error)
@@ -78,8 +81,6 @@ public final class VMAccountsProvider{
         })
         task.resume()
     }
-    
-    
     
     private func getCreditAgricoleAccounts()->([AccountList]){
         guard let raw_data = self.raw_accounts else{
@@ -110,18 +111,58 @@ public final class VMAccountsProvider{
         //Other
         let otherBanksRawData = self.getOtherAccounts()
         self.tableviewOtherData = self.extractData(from: otherBanksRawData)
+        
+        self.vc?.onStatus(newstate: .updated, message: nil)
+
     }
+    
 
     func extractData(from BanksRawData : [AccountList])->[UICellInfo]{
         var extractedData : [UICellInfo] = []
         for bankAccount in BanksRawData{
             if let bankAccountList = bankAccount.accounts {
-                extractedData.append(UICellInfo(title: bankAccount.title, amount: bankAccount.amount, isBankCell: true, isExpanded: false))
-                for account in bankAccountList{
-                    extractedData.append(UICellInfo(title: account.title, amount: account.amount, isBankCell: false, isExpanded: false))
+                
+                //check is the cell is expanded
+
+                let isExpanded = self.currentSelectedBank == bankAccount.id
+                
+                extractedData.append(UICellInfo(idBank: bankAccount.id,
+                                                idAccount: nil,
+                                                idOperation: nil,
+                                                title: bankAccount.title,
+                                                amount: bankAccount.amount.addDefaultCurrency(),
+                                                isBankCell: true))
+                
+                if isExpanded {
+                    for account in bankAccountList{
+                        extractedData.append(UICellInfo(idBank: bankAccount.id,
+                                                        idAccount: account.id,
+                                                        idOperation: nil,
+                                                        title: account.title,
+                                                        amount: account.amount.addDefaultCurrency(),
+                                                        isBankCell: false))
+                    }
                 }
             }
         }
         return extractedData
     }
+    
+    
+    func onTapOnBank(id : String?){
+        //Select or Unselect the cell
+        if (id == self.currentSelectedBank){
+            self.currentSelectedBank = ""
+        } else {
+            self.currentSelectedBank = id
+        }
+        self.loadDataForViewController()
+    }
+    func onTapAccountDetail(id : String?){
+        //Go to detail operation
+       
+        
+    }
+    
+    
 }
