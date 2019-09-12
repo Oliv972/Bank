@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3F60ADC023294FA100073DB0 /* VMAccountDetailDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADBF23294FA100073DB0 /* VMAccountDetailDisplay.swift */; };
+		3F60ADC2232A29E700073DB0 /* OperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADC1232A29E700073DB0 /* OperationCell.swift */; };
+		3F60ADC4232A302900073DB0 /* String+DateTimeStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADC3232A302900073DB0 /* String+DateTimeStamp.swift */; };
+		3F60ADC6232A352000073DB0 /* ApplicationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADC5232A352000073DB0 /* ApplicationStateProtocol.swift */; };
+		3F60ADC8232A36C700073DB0 /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADC7232A36C700073DB0 /* NetworkState.swift */; };
 		3FE7E0D72328E013001AE272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0D62328E013001AE272 /* AppDelegate.swift */; };
 		3FE7E0D92328E013001AE272 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0D82328E013001AE272 /* ViewController.swift */; };
 		3FE7E0DC2328E013001AE272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7E0DA2328E013001AE272 /* Main.storyboard */; };
@@ -27,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		3F60ADBF23294FA100073DB0 /* VMAccountDetailDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMAccountDetailDisplay.swift; sourceTree = "<group>"; };
+		3F60ADC1232A29E700073DB0 /* OperationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCell.swift; sourceTree = "<group>"; };
+		3F60ADC3232A302900073DB0 /* String+DateTimeStamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateTimeStamp.swift"; sourceTree = "<group>"; };
+		3F60ADC5232A352000073DB0 /* ApplicationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStateProtocol.swift; sourceTree = "<group>"; };
+		3F60ADC7232A36C700073DB0 /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
 		3FE7E0D32328E013001AE272 /* Bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE7E0D62328E013001AE272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE7E0D82328E013001AE272 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +105,7 @@
 				3FE7E0ED2328ECD3001AE272 /* AccountsVC.swift */,
 				3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */,
 				3FE7E0FB23292F53001AE272 /* BankCell.swift */,
+				3F60ADC1232A29E700073DB0 /* OperationCell.swift */,
 				3FE7E0FD2329374A001AE272 /* AccountCell.swift */,
 			);
 			path = Views;
@@ -114,7 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				3FE7E0EB2328ECA7001AE272 /* Store.swift */,
+				3F60ADC7232A36C700073DB0 /* NetworkState.swift */,
 				3FE7E0F22328F0AC001AE272 /* StateEnvironnement.swift */,
+				3F60ADC5232A352000073DB0 /* ApplicationStateProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -133,6 +144,7 @@
 			children = (
 				3FE7E0F8232911A4001AE272 /* Int+Bool.swift */,
 				3FE7E0FF23293ACB001AE272 /* String+Currency.swift */,
+				3F60ADC3232A302900073DB0 /* String+DateTimeStamp.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,6 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F60ADC8232A36C700073DB0 /* NetworkState.swift in Sources */,
+				3F60ADC6232A352000073DB0 /* ApplicationStateProtocol.swift in Sources */,
 				3FE7E0F9232911A4001AE272 /* Int+Bool.swift in Sources */,
 				3FE7E0F32328F0AC001AE272 /* StateEnvironnement.swift in Sources */,
 				3FE7E0EE2328ECD3001AE272 /* AccountsVC.swift in Sources */,
@@ -215,10 +229,12 @@
 				3FE7E0F72328F540001AE272 /* VMAccountsDisplay.swift in Sources */,
 				3FE7E0F52328F3E2001AE272 /* BankInfos.swift in Sources */,
 				3FE7E0F02328ECDF001AE272 /* AccountDetailVC.swift in Sources */,
+				3F60ADC4232A302900073DB0 /* String+DateTimeStamp.swift in Sources */,
 				3FE7E0FC23292F53001AE272 /* BankCell.swift in Sources */,
 				3FE7E0D92328E013001AE272 /* ViewController.swift in Sources */,
 				3FE7E10023293ACB001AE272 /* String+Currency.swift in Sources */,
 				3FE7E0FE2329374A001AE272 /* AccountCell.swift in Sources */,
+				3F60ADC2232A29E700073DB0 /* OperationCell.swift in Sources */,
 				3FE7E0D72328E013001AE272 /* AppDelegate.swift in Sources */,
 				3F60ADC023294FA100073DB0 /* VMAccountDetailDisplay.swift in Sources */,
 			);

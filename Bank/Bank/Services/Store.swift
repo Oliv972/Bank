@@ -13,6 +13,9 @@ public final class Store {
     
     static var shared : Store = Store()
     
-    var State_Environnement : EnvironnementProtocol = Production()
+    var State_Environnement : EnvironnementProtocol    = Production()
+    var State_Application   : ApplicationStateProtocol = Locked()
+    var State_Network       : NetworkStateProtocol     = Disconnected()
+
 
 }
