@@ -9,7 +9,12 @@
 import Foundation
 
 extension String {
-    func addDefaultCurrency ()-> String {
-        return "\(self) €"
+    func formatToCurrency ()-> String {
+        if let convert = Float(self) {
+            let number = NSNumber(value:convert)
+            return NumberFormatter.localizedString(from: number, number: .currency)
+        }else {
+            return "###"
+        }
     }
 }

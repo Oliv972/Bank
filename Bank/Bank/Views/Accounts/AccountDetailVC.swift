@@ -13,7 +13,7 @@ import UIKit
 public class AccountDetailVC : UIViewController {
     public var account : Account?
     
-    var accountDetailProvider : VMAccountsDetailProvider?
+    var accountDetailProvider : AccountsDetailProvider?
 
     @IBOutlet weak var labelAmount: UILabel!
     @IBOutlet weak var labelAccountName: UILabel!
@@ -22,12 +22,11 @@ public class AccountDetailVC : UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Detail du compte"
-        self.accountDetailProvider = VMAccountsDetailProvider(with: self, with: account )
+        self.accountDetailProvider = AccountsDetailProvider(with: self, with: account )
     }
 }
 
-extension AccountDetailVC : VMAccountDetailsRenderer {
+extension AccountDetailVC : AccountDetailView {
     func onOperationListUpdate() {
         self.tableviewoperation.reloadData()
     }

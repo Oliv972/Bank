@@ -12,7 +12,7 @@ import UIKit
 
 public class AccountsVC : UIViewController{
     
-    var accountsProvider : VMAccountsProvider?
+    var accountsProvider : AccountsProvider?
     
     @IBOutlet weak var button_reload: UIButton!
     @IBOutlet weak var tableview: UITableView!
@@ -20,8 +20,7 @@ public class AccountsVC : UIViewController{
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Mes comptes"
-        self.accountsProvider = VMAccountsProvider(with: self)
+        self.accountsProvider = AccountsProvider(with: self)
     }
     @IBAction func actionButton(_ sender: UIButton) {
         if sender == self.button_reload   { self.accountsProvider?.doFetchAccounts() }
@@ -50,7 +49,7 @@ extension AccountsVC  : UITableViewDataSource{
         guard let viewmodel = self.accountsProvider else{
             return
         }
-        var data : UICellInfo
+        var data : AccountsUIData
         if indexPath.section == 0{
             data = viewmodel.tableviewCAData[indexPath.row]
         }else {
@@ -129,7 +128,7 @@ extension AccountsVC  : UITableViewDataSource{
     }
 }
 
-extension AccountsVC :  VMAccountsRenderer {
+extension AccountsVC :  AccountsView {
     func onTapOnDetail(account: Account) {
         let newView = self.storyboard?.instantiateViewController(withIdentifier: "AccountDetailVC") as! AccountDetailVC
         newView.account = account
@@ -137,7 +136,7 @@ extension AccountsVC :  VMAccountsRenderer {
     }
     
     
-    func onStatus(newstate: VMStatus, message: String?) {
+    func onStatus(newstate: ProviderStatus, message: String?) {
     
         OperationQueue.main.addOperation {
             self.label_info.text = message

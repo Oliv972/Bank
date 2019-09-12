@@ -7,32 +7,31 @@
 //
 
 import Foundation
-import UIKit
 
-public struct UIOperationCellInfo{
+public struct OperationUIData{
     var operation_title  : String
     var operation_amount : String
     var operation_date   : String
 }
 
-protocol VMAccountDetailsRenderer where Self : UIViewController{
+protocol AccountDetailView : NSObjectProtocol{
     func onAccountDetailUpdate(title : String?, amount : String?)
     func onOperationListUpdate()
 }
 
 
-public final class VMAccountsDetailProvider{
+public final class AccountsDetailProvider{
     
     
-    private weak var vc : VMAccountDetailsRenderer?
+    private weak var vc : AccountDetailView?
     private var account : Account?
 
-    public var tableviewData    : [UIOperationCellInfo] = []
+    public var tableviewData    : [OperationUIData] = []
     
-    init(with viewcontroller : VMAccountDetailsRenderer, with account : Account?) {
+    init(with viewcontroller : AccountDetailView, with account : Account?) {
         self.vc = viewcontroller
         self.account = account
-        self.vc?.onAccountDetailUpdate(title: account?.title.addDefaultCurrency(), amount: account?.amount.addDefaultCurrency())
+        self.vc?.onAccountDetailUpdate(title: account?.title, amount: account?.amount)
         self.loadDataForViewController()
     }
     
@@ -48,14 +47,14 @@ public final class VMAccountsDetailProvider{
             }            
         }
     
-        var result : [UIOperationCellInfo] = []
+        var result : [OperationUIData] = []
         for operation in sortedOperations {
             let title = operation.title
-            let amount = operation.amount.addDefaultCurrency()
+            let amount = operation.amount
             let date = operation.date.convertTimeStampToDate()
 
             
-            result.append(UIOperationCellInfo(operation_title: title, operation_amount: amount, operation_date: date))
+            result.append(OperationUIData(operation_title: title, operation_amount: amount, operation_date: date))
         }
         
         tableviewData = result 

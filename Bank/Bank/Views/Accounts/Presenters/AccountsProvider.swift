@@ -7,22 +7,22 @@
 //
 
 import Foundation
-import UIKit
+//import UIKit
 
 
-enum VMStatus{
+enum ProviderStatus{
     case loading
     case error
     case updated
 }
 
-protocol VMAccountsRenderer where Self : UIViewController{
-    func onStatus(newstate : VMStatus, message : String?)
+protocol AccountsView : NSObjectProtocol{
+    func onStatus(newstate : ProviderStatus, message : String?)
     func onTapOnDetail(account : Account)
 }
 
 
-public struct UICellInfo{
+public struct AccountsUIData{
     var idBank : String? = nil
     var idAccount : String? = nil
     var idOperation : String? = nil
@@ -32,21 +32,18 @@ public struct UICellInfo{
     var isBankCell : Bool
 }
 
-public final class VMAccountsProvider{
+public final class AccountsProvider{
     
-    
-    private weak var vc : VMAccountsRenderer?
-    
+    private weak var vc : AccountsView?
     private var raw_accounts : [AccountList]?
     
-    
-    public var tableviewCAData    : [UICellInfo] = []
-    public var tableviewOtherData : [UICellInfo] = []
+    public var tableviewCAData    : [AccountsUIData] = []
+    public var tableviewOtherData : [AccountsUIData] = []
     
     private var currentSelectedBank : String? = ""
 
     
-    init(with viewcontroller : VMAccountsRenderer) {
+    init(with viewcontroller : AccountsView) {
         self.vc = viewcontroller
         self.doFetchAccounts()
     }
@@ -122,8 +119,8 @@ public final class VMAccountsProvider{
     }
     
 
-    func extractData(from BanksRawData : [AccountList])->[UICellInfo]{
-        var extractedData : [UICellInfo] = []
+    func extractData(from BanksRawData : [AccountList])->[AccountsUIData]{
+        var extractedData : [AccountsUIData] = []
         for bankAccount in BanksRawData{
             if let bankAccountList = bankAccount.accounts {
                 
@@ -131,20 +128,20 @@ public final class VMAccountsProvider{
 
                 let isExpanded = self.currentSelectedBank == bankAccount.id
                 
-                extractedData.append(UICellInfo(idBank: bankAccount.id,
+                extractedData.append(AccountsUIData(idBank: bankAccount.id,
                                                 idAccount: nil,
                                                 idOperation: nil,
                                                 title: bankAccount.title,
-                                                amount: bankAccount.amount.addDefaultCurrency(),
+                                                amount: bankAccount.amount,
                                                 isBankCell: true))
                 
                 if isExpanded {
                     for account in bankAccountList{
-                        extractedData.append(UICellInfo(idBank: bankAccount.id,
+                        extractedData.append(AccountsUIData(idBank: bankAccount.id,
                                                         idAccount: account.id,
                                                         idOperation: nil,
                                                         title: account.title,
-                                                        amount: account.amount.addDefaultCurrency(),
+                                                        amount: account.amount,
                                                         isBankCell: false))
                     }
                 }

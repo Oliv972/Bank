@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F60ADC023294FA100073DB0 /* VMAccountDetailDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADBF23294FA100073DB0 /* VMAccountDetailDisplay.swift */; };
+		3F60ADC023294FA100073DB0 /* AccountDetailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADBF23294FA100073DB0 /* AccountDetailProvider.swift */; };
 		3F60ADC2232A29E700073DB0 /* OperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADC1232A29E700073DB0 /* OperationCell.swift */; };
 		3F60ADC4232A302900073DB0 /* String+DateTimeStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADC3232A302900073DB0 /* String+DateTimeStamp.swift */; };
 		3F60ADC6232A352000073DB0 /* ApplicationStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADC5232A352000073DB0 /* ApplicationStateProtocol.swift */; };
 		3F60ADC8232A36C700073DB0 /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADC7232A36C700073DB0 /* NetworkState.swift */; };
+		3F60ADCA232A47FC00073DB0 /* SimulationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADC9232A47FC00073DB0 /* SimulationVC.swift */; };
+		3F60ADCC232A482D00073DB0 /* LocalisationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADCB232A482D00073DB0 /* LocalisationVC.swift */; };
+		3F60ADD4232A4F2400073DB0 /* SimulationCalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADD3232A4F2400073DB0 /* SimulationCalculatorPresenter.swift */; };
+		3F842825232A84EF00979A7B /* Double+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F842824232A84EF00979A7B /* Double+Currency.swift */; };
 		3FE7E0D72328E013001AE272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0D62328E013001AE272 /* AppDelegate.swift */; };
-		3FE7E0D92328E013001AE272 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0D82328E013001AE272 /* ViewController.swift */; };
 		3FE7E0DC2328E013001AE272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7E0DA2328E013001AE272 /* Main.storyboard */; };
 		3FE7E0DE2328E015001AE272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7E0DD2328E015001AE272 /* Assets.xcassets */; };
 		3FE7E0E12328E015001AE272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7E0DF2328E015001AE272 /* LaunchScreen.storyboard */; };
@@ -22,7 +25,7 @@
 		3FE7E0F02328ECDF001AE272 /* AccountDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */; };
 		3FE7E0F32328F0AC001AE272 /* StateEnvironnement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0F22328F0AC001AE272 /* StateEnvironnement.swift */; };
 		3FE7E0F52328F3E2001AE272 /* BankInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0F42328F3E2001AE272 /* BankInfos.swift */; };
-		3FE7E0F72328F540001AE272 /* VMAccountsDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0F62328F540001AE272 /* VMAccountsDisplay.swift */; };
+		3FE7E0F72328F540001AE272 /* AccountsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0F62328F540001AE272 /* AccountsProvider.swift */; };
 		3FE7E0F9232911A4001AE272 /* Int+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0F8232911A4001AE272 /* Int+Bool.swift */; };
 		3FE7E0FC23292F53001AE272 /* BankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0FB23292F53001AE272 /* BankCell.swift */; };
 		3FE7E0FE2329374A001AE272 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0FD2329374A001AE272 /* AccountCell.swift */; };
@@ -30,14 +33,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F60ADBF23294FA100073DB0 /* VMAccountDetailDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMAccountDetailDisplay.swift; sourceTree = "<group>"; };
+		3F60ADBF23294FA100073DB0 /* AccountDetailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailProvider.swift; sourceTree = "<group>"; };
 		3F60ADC1232A29E700073DB0 /* OperationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCell.swift; sourceTree = "<group>"; };
 		3F60ADC3232A302900073DB0 /* String+DateTimeStamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateTimeStamp.swift"; sourceTree = "<group>"; };
 		3F60ADC5232A352000073DB0 /* ApplicationStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStateProtocol.swift; sourceTree = "<group>"; };
 		3F60ADC7232A36C700073DB0 /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
+		3F60ADC9232A47FC00073DB0 /* SimulationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationVC.swift; sourceTree = "<group>"; };
+		3F60ADCB232A482D00073DB0 /* LocalisationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalisationVC.swift; sourceTree = "<group>"; };
+		3F60ADD3232A4F2400073DB0 /* SimulationCalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationCalculatorPresenter.swift; sourceTree = "<group>"; };
+		3F842824232A84EF00979A7B /* Double+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Currency.swift"; sourceTree = "<group>"; };
 		3FE7E0D32328E013001AE272 /* Bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE7E0D62328E013001AE272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FE7E0D82328E013001AE272 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FE7E0DB2328E013001AE272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FE7E0DD2328E015001AE272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FE7E0E02328E015001AE272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,7 +53,7 @@
 		3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailVC.swift; sourceTree = "<group>"; };
 		3FE7E0F22328F0AC001AE272 /* StateEnvironnement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateEnvironnement.swift; sourceTree = "<group>"; };
 		3FE7E0F42328F3E2001AE272 /* BankInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInfos.swift; sourceTree = "<group>"; };
-		3FE7E0F62328F540001AE272 /* VMAccountsDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMAccountsDisplay.swift; sourceTree = "<group>"; };
+		3FE7E0F62328F540001AE272 /* AccountsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsProvider.swift; sourceTree = "<group>"; };
 		3FE7E0F8232911A4001AE272 /* Int+Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Bool.swift"; sourceTree = "<group>"; };
 		3FE7E0FB23292F53001AE272 /* BankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCell.swift; sourceTree = "<group>"; };
 		3FE7E0FD2329374A001AE272 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
@@ -65,6 +71,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F60ADCD232A487400073DB0 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				3F60ADCE232A488800073DB0 /* Cells */,
+				3FE7E0F12328EE1D001AE272 /* Presenters */,
+				3FE7E0ED2328ECD3001AE272 /* AccountsVC.swift */,
+				3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		3F60ADCE232A488800073DB0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3FE7E0FB23292F53001AE272 /* BankCell.swift */,
+				3F60ADC1232A29E700073DB0 /* OperationCell.swift */,
+				3FE7E0FD2329374A001AE272 /* AccountCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3F60ADCF232A489600073DB0 /* Simulation */ = {
+			isa = PBXGroup;
+			children = (
+				3F60ADD2232A48E400073DB0 /* Presenters */,
+				3F60ADC9232A47FC00073DB0 /* SimulationVC.swift */,
+			);
+			path = Simulation;
+			sourceTree = "<group>";
+		};
+		3F60ADD0232A48B000073DB0 /* Localisation */ = {
+			isa = PBXGroup;
+			children = (
+				3F60ADCB232A482D00073DB0 /* LocalisationVC.swift */,
+			);
+			path = Localisation;
+			sourceTree = "<group>";
+		};
+		3F60ADD1232A48C500073DB0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3FE7E0DD2328E015001AE272 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3F60ADD2232A48E400073DB0 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				3F60ADD3232A4F2400073DB0 /* SimulationCalculatorPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		3FE7E0CA2328E013001AE272 = {
 			isa = PBXGroup;
 			children = (
@@ -84,14 +144,13 @@
 		3FE7E0D52328E013001AE272 /* Bank */ = {
 			isa = PBXGroup;
 			children = (
+				3F60ADD1232A48C500073DB0 /* Resources */,
 				3FE7E0FA232911BE001AE272 /* Extensions */,
 				3FE7E0EA2328EC94001AE272 /* Services */,
 				3FE7E0E92328EC8D001AE272 /* Modele */,
 				3FE7E0E82328EC82001AE272 /* Views */,
 				3FE7E0D62328E013001AE272 /* AppDelegate.swift */,
-				3FE7E0D82328E013001AE272 /* ViewController.swift */,
 				3FE7E0DA2328E013001AE272 /* Main.storyboard */,
-				3FE7E0DD2328E015001AE272 /* Assets.xcassets */,
 				3FE7E0DF2328E015001AE272 /* LaunchScreen.storyboard */,
 				3FE7E0E22328E015001AE272 /* Info.plist */,
 			);
@@ -101,12 +160,9 @@
 		3FE7E0E82328EC82001AE272 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3FE7E0F12328EE1D001AE272 /* MVVModule */,
-				3FE7E0ED2328ECD3001AE272 /* AccountsVC.swift */,
-				3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */,
-				3FE7E0FB23292F53001AE272 /* BankCell.swift */,
-				3F60ADC1232A29E700073DB0 /* OperationCell.swift */,
-				3FE7E0FD2329374A001AE272 /* AccountCell.swift */,
+				3F60ADD0232A48B000073DB0 /* Localisation */,
+				3F60ADCF232A489600073DB0 /* Simulation */,
+				3F60ADCD232A487400073DB0 /* Accounts */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,13 +186,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		3FE7E0F12328EE1D001AE272 /* MVVModule */ = {
+		3FE7E0F12328EE1D001AE272 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				3FE7E0F62328F540001AE272 /* VMAccountsDisplay.swift */,
-				3F60ADBF23294FA100073DB0 /* VMAccountDetailDisplay.swift */,
+				3FE7E0F62328F540001AE272 /* AccountsProvider.swift */,
+				3F60ADBF23294FA100073DB0 /* AccountDetailProvider.swift */,
 			);
-			path = MVVModule;
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		3FE7E0FA232911BE001AE272 /* Extensions */ = {
@@ -145,6 +201,7 @@
 				3FE7E0F8232911A4001AE272 /* Int+Bool.swift */,
 				3FE7E0FF23293ACB001AE272 /* String+Currency.swift */,
 				3F60ADC3232A302900073DB0 /* String+DateTimeStamp.swift */,
+				3F842824232A84EF00979A7B /* Double+Currency.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -225,18 +282,21 @@
 				3FE7E0F9232911A4001AE272 /* Int+Bool.swift in Sources */,
 				3FE7E0F32328F0AC001AE272 /* StateEnvironnement.swift in Sources */,
 				3FE7E0EE2328ECD3001AE272 /* AccountsVC.swift in Sources */,
+				3F842825232A84EF00979A7B /* Double+Currency.swift in Sources */,
 				3FE7E0EC2328ECA7001AE272 /* Store.swift in Sources */,
-				3FE7E0F72328F540001AE272 /* VMAccountsDisplay.swift in Sources */,
+				3FE7E0F72328F540001AE272 /* AccountsProvider.swift in Sources */,
+				3F60ADCA232A47FC00073DB0 /* SimulationVC.swift in Sources */,
 				3FE7E0F52328F3E2001AE272 /* BankInfos.swift in Sources */,
 				3FE7E0F02328ECDF001AE272 /* AccountDetailVC.swift in Sources */,
 				3F60ADC4232A302900073DB0 /* String+DateTimeStamp.swift in Sources */,
 				3FE7E0FC23292F53001AE272 /* BankCell.swift in Sources */,
-				3FE7E0D92328E013001AE272 /* ViewController.swift in Sources */,
 				3FE7E10023293ACB001AE272 /* String+Currency.swift in Sources */,
 				3FE7E0FE2329374A001AE272 /* AccountCell.swift in Sources */,
+				3F60ADD4232A4F2400073DB0 /* SimulationCalculatorPresenter.swift in Sources */,
+				3F60ADCC232A482D00073DB0 /* LocalisationVC.swift in Sources */,
 				3F60ADC2232A29E700073DB0 /* OperationCell.swift in Sources */,
 				3FE7E0D72328E013001AE272 /* AppDelegate.swift in Sources */,
-				3F60ADC023294FA100073DB0 /* VMAccountDetailDisplay.swift in Sources */,
+				3F60ADC023294FA100073DB0 /* AccountDetailProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
