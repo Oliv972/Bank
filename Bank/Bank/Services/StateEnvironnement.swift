@@ -10,46 +10,19 @@ import Foundation
 
 
 protocol EnvironnementProtocol{
-    func Get_AccountsURL()->URL
-    func Get_VISAATMLocationURL()->URL
+    var url_account : URL { get }
+    var url_visa_atm: URL { get }
 }
 
 public class Production : EnvironnementProtocol{
-    func Get_VISAATMLocationURL() -> URL {
-        let stringURL = "http://51.75.194.143/livio/atmlocation"
-        guard let url =  URL(string: stringURL) else{ fatalError("URL is not valid") }
-        return url
-    }
-    
-    func Get_AccountsURL() -> URL {
-        let stringURL = "http://demo0576531.mockable.io/accounts"
-        guard let url =  URL(string: stringURL) else{ fatalError("URL is not valid") }
-        return url
-    }
+    var url_account : URL = URL(string: "http://demo0576531.mockable.io/accounts")!
+    var url_visa_atm: URL = URL(string: "http://51.75.194.143/livio/atmlocation")!
 }
 public class Developpement : EnvironnementProtocol{
-    func Get_VISAATMLocationURL() -> URL {
-        let stringURL = "http://51.75.194.143/livio/atmlocation"
-        guard let url =  URL(string: stringURL) else{ fatalError("URL is not valid") }
-        return url
-    }
-   
-    func Get_AccountsURL() -> URL {
-        let stringURL = "http://51.75.194.143/accounts"
-        guard let url =  URL(string: stringURL) else{ fatalError("URL is not valid") }
-        return url
-    }
+    var url_account : URL = URL(string: "http://51.75.194.143/accounts")!
+    var url_visa_atm: URL = URL(string: "http://51.75.194.143/livio/atmlocation")!
 }
 public class LocalHost : EnvironnementProtocol{
-    func Get_VISAATMLocationURL() -> URL {
-        let stringURL = "http://localhost/atmlocation"
-        guard let url =  URL(string: stringURL) else{ fatalError("URL is not valid") }
-        return url
-    }
-    
-    func Get_AccountsURL() -> URL {
-        let stringURL = "http://localhost/accounts"
-        guard let url =  URL(string: stringURL) else{ fatalError("URL is not valid") }
-        return url
-    }
+    var url_account : URL = URL(string: "http://localhost/accounts")!
+    var url_visa_atm: URL = URL(string: "http://localhost/livio/atmlocation")!
 }

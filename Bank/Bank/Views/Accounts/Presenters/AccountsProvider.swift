@@ -51,7 +51,7 @@ public final class AccountsProvider{
         
         self.vc?.onStatus(newstate: .loading, message: "Loading...")
         
-        let url = Store.shared.State_Environnement.Get_AccountsURL()
+        let url = Store.shared.State_Environnement.url_account
         
         let session = URLSession.shared
         var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 60)

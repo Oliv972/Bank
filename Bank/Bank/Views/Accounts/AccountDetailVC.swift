@@ -24,6 +24,10 @@ public class AccountDetailVC : UIViewController {
         super.viewDidLoad()
         self.accountDetailProvider = AccountsDetailProvider(with: self, with: account )
     }
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
 }
 
 extension AccountDetailVC : AccountDetailView {

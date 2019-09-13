@@ -20,7 +20,7 @@ public protocol LocationViewer : NSObjectProtocol{
 }
 
 public class VISAATMLocatorPresenter : LocatorPresenter {
-    var renderer : LocationViewer?
+    private weak var renderer : LocationViewer?
     var raw_atm_data : [ATM]? = nil
     
     public init(view : LocationViewer){
@@ -29,7 +29,7 @@ public class VISAATMLocatorPresenter : LocatorPresenter {
     }
     
     func doFetchATMLocations() {
-        let url = Store.shared.State_Environnement.Get_VISAATMLocationURL()
+        let url = Store.shared.State_Environnement.url_visa_atm
         var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
         request.httpMethod = "GET"
         let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in

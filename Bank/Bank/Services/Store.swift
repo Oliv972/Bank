@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 public final class Store {
     
@@ -16,6 +16,8 @@ public final class Store {
     var State_Environnement : EnvironnementProtocol    = Production()
     var State_Application   : ApplicationStateProtocol = Locked()
     var State_Network       : NetworkStateProtocol     = Disconnected()
-
-
+    var State_Theme         : ThemeProtocol            = DarkTheme()
+    
 }
+
+

@@ -18,6 +18,11 @@
 		3F76F4C8232B849F00D379AE /* ATMLocatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F76F4C7232B849F00D379AE /* ATMLocatorPresenter.swift */; };
 		3F76F4CA232B879C00D379AE /* ATM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F76F4C9232B879C00D379AE /* ATM.swift */; };
 		3F842825232A84EF00979A7B /* Double+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F842824232A84EF00979A7B /* Double+Currency.swift */; };
+		3FE67589232B9F4B00F5EBB1 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE67588232B9F4B00F5EBB1 /* SettingsVC.swift */; };
+		3FE6758C232B9F6000F5EBB1 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6758B232B9F6000F5EBB1 /* SettingsPresenter.swift */; };
+		3FE6758E232BBA0300F5EBB1 /* ColorThemeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6758D232BBA0300F5EBB1 /* ColorThemeState.swift */; };
+		3FE67590232BC15000F5EBB1 /* ThemeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6758F232BC15000F5EBB1 /* ThemeProvider.swift */; };
+		3FE67592232BDE6C00F5EBB1 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE67591232BDE6C00F5EBB1 /* UIView+Shadow.swift */; };
 		3FE7E0D72328E013001AE272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0D62328E013001AE272 /* AppDelegate.swift */; };
 		3FE7E0DC2328E013001AE272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7E0DA2328E013001AE272 /* Main.storyboard */; };
 		3FE7E0DE2328E015001AE272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7E0DD2328E015001AE272 /* Assets.xcassets */; };
@@ -46,6 +51,11 @@
 		3F76F4C7232B849F00D379AE /* ATMLocatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMLocatorPresenter.swift; sourceTree = "<group>"; };
 		3F76F4C9232B879C00D379AE /* ATM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATM.swift; sourceTree = "<group>"; };
 		3F842824232A84EF00979A7B /* Double+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Currency.swift"; sourceTree = "<group>"; };
+		3FE67588232B9F4B00F5EBB1 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		3FE6758B232B9F6000F5EBB1 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		3FE6758D232BBA0300F5EBB1 /* ColorThemeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeState.swift; sourceTree = "<group>"; };
+		3FE6758F232BC15000F5EBB1 /* ThemeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProvider.swift; sourceTree = "<group>"; };
+		3FE67591232BDE6C00F5EBB1 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		3FE7E0D32328E013001AE272 /* Bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE7E0D62328E013001AE272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE7E0DB2328E013001AE272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +148,23 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		3FE67587232B9F3600F5EBB1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3FE6758A232B9F5100F5EBB1 /* Presenter */,
+				3FE67588232B9F4B00F5EBB1 /* SettingsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3FE6758A232B9F5100F5EBB1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3FE6758B232B9F6000F5EBB1 /* SettingsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		3FE7E0CA2328E013001AE272 = {
 			isa = PBXGroup;
 			children = (
@@ -173,9 +200,11 @@
 		3FE7E0E82328EC82001AE272 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3FE67587232B9F3600F5EBB1 /* Settings */,
 				3F60ADD0232A48B000073DB0 /* Localisation */,
 				3F60ADCF232A489600073DB0 /* Simulation */,
 				3F60ADCD232A487400073DB0 /* Accounts */,
+				3FE6758F232BC15000F5EBB1 /* ThemeProvider.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE7E0EB2328ECA7001AE272 /* Store.swift */,
+				3FE6758D232BBA0300F5EBB1 /* ColorThemeState.swift */,
 				3F60ADC7232A36C700073DB0 /* NetworkState.swift */,
 				3FE7E0F22328F0AC001AE272 /* StateEnvironnement.swift */,
 				3F60ADC5232A352000073DB0 /* ApplicationStateProtocol.swift */,
@@ -216,6 +246,7 @@
 				3FE7E0FF23293ACB001AE272 /* String+Currency.swift */,
 				3F60ADC3232A302900073DB0 /* String+DateTimeStamp.swift */,
 				3F842824232A84EF00979A7B /* Double+Currency.swift */,
+				3FE67591232BDE6C00F5EBB1 /* UIView+Shadow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,10 +329,13 @@
 				3FE7E0EE2328ECD3001AE272 /* AccountsVC.swift in Sources */,
 				3F842825232A84EF00979A7B /* Double+Currency.swift in Sources */,
 				3FE7E0EC2328ECA7001AE272 /* Store.swift in Sources */,
+				3FE67592232BDE6C00F5EBB1 /* UIView+Shadow.swift in Sources */,
 				3FE7E0F72328F540001AE272 /* AccountsProvider.swift in Sources */,
 				3F60ADCA232A47FC00073DB0 /* SimulationVC.swift in Sources */,
 				3FE7E0F52328F3E2001AE272 /* BankInfos.swift in Sources */,
+				3FE6758E232BBA0300F5EBB1 /* ColorThemeState.swift in Sources */,
 				3F76F4CA232B879C00D379AE /* ATM.swift in Sources */,
+				3FE6758C232B9F6000F5EBB1 /* SettingsPresenter.swift in Sources */,
 				3FE7E0F02328ECDF001AE272 /* AccountDetailVC.swift in Sources */,
 				3F60ADC4232A302900073DB0 /* String+DateTimeStamp.swift in Sources */,
 				3FE7E0FC23292F53001AE272 /* BankCell.swift in Sources */,
@@ -311,7 +345,9 @@
 				3F60ADD4232A4F2400073DB0 /* SimulationCalculatorPresenter.swift in Sources */,
 				3F60ADCC232A482D00073DB0 /* LocalisationVC.swift in Sources */,
 				3F60ADC2232A29E700073DB0 /* OperationCell.swift in Sources */,
+				3FE67589232B9F4B00F5EBB1 /* SettingsVC.swift in Sources */,
 				3FE7E0D72328E013001AE272 /* AppDelegate.swift in Sources */,
+				3FE67590232BC15000F5EBB1 /* ThemeProvider.swift in Sources */,
 				3F60ADC023294FA100073DB0 /* AccountDetailProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
