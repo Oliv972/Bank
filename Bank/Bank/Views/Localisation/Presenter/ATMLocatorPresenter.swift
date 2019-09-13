@@ -50,12 +50,10 @@ public class VISAATMLocatorPresenter : LocatorPresenter {
     }
     
     
-    
-    
-    
     func doBuildInfosForUI(){
         guard let list = self.raw_atm_data else { return }
         for atm in list {
+            self.renderer?.clearPoints()
             self.renderer?.addBank(atLatitude: atm.latitude, longitude: atm.longitude, name: atm.bank_name)
         }
     }

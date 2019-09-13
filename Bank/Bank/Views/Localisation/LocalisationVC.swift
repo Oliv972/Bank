@@ -45,7 +45,10 @@ public class LocalisationVC : UIViewController{
         super.viewWillDisappear(animated)
     }
 }
-extension LocalisationVC : MKMapViewDelegate{}
+extension LocalisationVC : MKMapViewDelegate{
+    
+    
+}
 extension LocalisationVC : CLLocationManagerDelegate {}
 
 
@@ -60,7 +63,6 @@ extension LocalisationVC : LocationViewer {
         annotation.subtitle = "One day I'll go here..."
         annotation.coordinate = CLLocationCoordinate2D(latitude: atLatitude, longitude: longitude)
 
-        
         map.addAnnotation(annotation)
     }
     
