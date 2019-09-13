@@ -15,6 +15,8 @@
 		3F60ADCA232A47FC00073DB0 /* SimulationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADC9232A47FC00073DB0 /* SimulationVC.swift */; };
 		3F60ADCC232A482D00073DB0 /* LocalisationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADCB232A482D00073DB0 /* LocalisationVC.swift */; };
 		3F60ADD4232A4F2400073DB0 /* SimulationCalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60ADD3232A4F2400073DB0 /* SimulationCalculatorPresenter.swift */; };
+		3F76F4C8232B849F00D379AE /* ATMLocatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F76F4C7232B849F00D379AE /* ATMLocatorPresenter.swift */; };
+		3F76F4CA232B879C00D379AE /* ATM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F76F4C9232B879C00D379AE /* ATM.swift */; };
 		3F842825232A84EF00979A7B /* Double+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F842824232A84EF00979A7B /* Double+Currency.swift */; };
 		3FE7E0D72328E013001AE272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0D62328E013001AE272 /* AppDelegate.swift */; };
 		3FE7E0DC2328E013001AE272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7E0DA2328E013001AE272 /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 		3F60ADC9232A47FC00073DB0 /* SimulationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationVC.swift; sourceTree = "<group>"; };
 		3F60ADCB232A482D00073DB0 /* LocalisationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalisationVC.swift; sourceTree = "<group>"; };
 		3F60ADD3232A4F2400073DB0 /* SimulationCalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationCalculatorPresenter.swift; sourceTree = "<group>"; };
+		3F76F4C7232B849F00D379AE /* ATMLocatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMLocatorPresenter.swift; sourceTree = "<group>"; };
+		3F76F4C9232B879C00D379AE /* ATM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATM.swift; sourceTree = "<group>"; };
 		3F842824232A84EF00979A7B /* Double+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Currency.swift"; sourceTree = "<group>"; };
 		3FE7E0D32328E013001AE272 /* Bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE7E0D62328E013001AE272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		3F60ADD0232A48B000073DB0 /* Localisation */ = {
 			isa = PBXGroup;
 			children = (
+				3F76F4C6232B83E000D379AE /* Presenter */,
 				3F60ADCB232A482D00073DB0 /* LocalisationVC.swift */,
 			);
 			path = Localisation;
@@ -123,6 +128,14 @@
 				3F60ADD3232A4F2400073DB0 /* SimulationCalculatorPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		3F76F4C6232B83E000D379AE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3F76F4C7232B849F00D379AE /* ATMLocatorPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		3FE7E0CA2328E013001AE272 = {
@@ -171,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE7E0F42328F3E2001AE272 /* BankInfos.swift */,
+				3F76F4C9232B879C00D379AE /* ATM.swift */,
 			);
 			path = Modele;
 			sourceTree = "<group>";
@@ -287,11 +301,13 @@
 				3FE7E0F72328F540001AE272 /* AccountsProvider.swift in Sources */,
 				3F60ADCA232A47FC00073DB0 /* SimulationVC.swift in Sources */,
 				3FE7E0F52328F3E2001AE272 /* BankInfos.swift in Sources */,
+				3F76F4CA232B879C00D379AE /* ATM.swift in Sources */,
 				3FE7E0F02328ECDF001AE272 /* AccountDetailVC.swift in Sources */,
 				3F60ADC4232A302900073DB0 /* String+DateTimeStamp.swift in Sources */,
 				3FE7E0FC23292F53001AE272 /* BankCell.swift in Sources */,
 				3FE7E10023293ACB001AE272 /* String+Currency.swift in Sources */,
 				3FE7E0FE2329374A001AE272 /* AccountCell.swift in Sources */,
+				3F76F4C8232B849F00D379AE /* ATMLocatorPresenter.swift in Sources */,
 				3F60ADD4232A4F2400073DB0 /* SimulationCalculatorPresenter.swift in Sources */,
 				3F60ADCC232A482D00073DB0 /* LocalisationVC.swift in Sources */,
 				3F60ADC2232A29E700073DB0 /* OperationCell.swift in Sources */,

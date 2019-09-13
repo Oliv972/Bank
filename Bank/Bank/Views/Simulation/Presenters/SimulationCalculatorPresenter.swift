@@ -32,8 +32,6 @@ public class DefaultCalculator : CreditCalculator {
     private var current_Taux     : Double = 0.0
     private var current_Montant  : Double = 0.0
     private var current_Duree    : Int = 0
-
-    
     
     init(vc : CreditViewer, defaultTaux : Double, defaultMontant : Double, defaultDuree : Int) {
         self.renderer = vc
