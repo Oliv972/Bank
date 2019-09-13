@@ -125,23 +125,11 @@
                                     <constraint firstItem="g2l-8g-qbK" firstAttribute="height" secondItem="Byh-UH-Wpn" secondAttribute="height" id="Skg-lx-MFq"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czd-Mv-uT9">
-                                <rect key="frame" x="320.66666666666669" y="64" width="73.333333333333314" height="25.333333333333329"/>
-                                <color key="tintColor" name="Blackboard"/>
-                                <state key="normal" title="Editer" image="Calculator">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="OLi-If-5zr" kind="presentation" modalTransitionStyle="crossDissolve" id="uMK-5Q-4kJ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cbx-gH-sJz" firstAttribute="leading" secondItem="97e-NV-3ml" secondAttribute="leading" constant="20" id="4rN-28-TCv"/>
-                            <constraint firstItem="Czd-Mv-uT9" firstAttribute="top" secondItem="97e-NV-3ml" secondAttribute="top" constant="20" id="EAV-8G-BmM"/>
                             <constraint firstItem="97e-NV-3ml" firstAttribute="bottom" secondItem="Cbx-gH-sJz" secondAttribute="bottom" id="HV3-2M-lHY"/>
-                            <constraint firstItem="97e-NV-3ml" firstAttribute="trailing" secondItem="Czd-Mv-uT9" secondAttribute="trailing" constant="20" id="PAH-Wz-KxY"/>
                             <constraint firstItem="97e-NV-3ml" firstAttribute="trailing" secondItem="Cbx-gH-sJz" secondAttribute="trailing" constant="20" id="xYg-TB-E4N"/>
                             <constraint firstItem="Cbx-gH-sJz" firstAttribute="top" secondItem="97e-NV-3ml" secondAttribute="top" constant="100" id="yKy-uf-yEh"/>
                         </constraints>
@@ -161,53 +149,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9u-4o-RoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1000.0000000000001" y="450.66964285714283"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="njm-H3-LFL">
-            <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="OLi-If-5zr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Trm-A8-qzA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OP3-Ji-KHv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Nxu-K8-ibT">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26w-j3-1kb">
-                                            <rect key="frame" x="20" y="50" width="40" height="34"/>
-                                            <state key="normal" title="Back">
-                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="dkE-Hj-suG" kind="unwind" unwindAction="unwindToSimulationVCWithSegue:" id="Z9Z-bd-wVC"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="26w-j3-1kb" firstAttribute="top" secondItem="Nxu-K8-ibT" secondAttribute="top" constant="50" id="3JV-HW-o0Y"/>
-                                        <constraint firstItem="26w-j3-1kb" firstAttribute="leading" secondItem="Nxu-K8-ibT" secondAttribute="leading" constant="20" id="3TV-PX-5dd"/>
-                                    </constraints>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="OP3-Ji-KHv" firstAttribute="top" secondItem="Trm-A8-qzA" secondAttribute="top" id="AXl-El-dal"/>
-                            <constraint firstAttribute="trailing" secondItem="OP3-Ji-KHv" secondAttribute="trailing" id="AbP-vr-FvJ"/>
-                            <constraint firstItem="OP3-Ji-KHv" firstAttribute="leading" secondItem="Trm-A8-qzA" secondAttribute="leading" id="HXd-Gm-nH6"/>
-                            <constraint firstAttribute="bottom" secondItem="OP3-Ji-KHv" secondAttribute="bottom" id="MUJ-dn-BBE"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="ixx-Z3-ocs"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BZ2-Zf-Xfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="dkE-Hj-suG" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="-233" y="448"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="AiK-iO-dKl">
