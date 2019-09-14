@@ -40,3 +40,32 @@ class DarkTheme: ThemeProtocol {
     var normal_Color             : UIColor? = UIColor(named: "Color-White")
     var image_tint_Color         : UIColor? = UIColor(named: "Color-Red")
 }
+
+class ClearTheme: ThemeProtocol {
+    
+    var statusBarStyle: UIStatusBarStyle? = .lightContent
+    
+    var backgroundColor          : UIColor? = UIColor.white
+    var contrastedBackgroundColor: UIColor? = UIColor.darkGray
+    
+    var title_Color              : UIColor? = UIColor.black
+    var subtitle_Color           : UIColor? = UIColor.darkGray
+    var heading_1_Color          : UIColor? = UIColor.black
+    var heading_2_Color          : UIColor? = UIColor.lightGray
+    var normal_Color             : UIColor? = UIColor.white
+    var image_tint_Color         : UIColor? = UIColor.black
+}
+class BlueTheme: ThemeProtocol {
+    
+    var statusBarStyle: UIStatusBarStyle? = .lightContent
+    
+    var backgroundColor          : UIColor? = UIColor.white
+    var contrastedBackgroundColor: UIColor? = UIColor.darkGray
+    
+    var title_Color              : UIColor? = UIColor.blue
+    var subtitle_Color           : UIColor? = UIColor.darkGray
+    var heading_1_Color          : UIColor? = UIColor.black
+    var heading_2_Color          : UIColor? = UIColor.lightGray
+    var normal_Color             : UIColor? = UIColor.white
+    var image_tint_Color         : UIColor? = UIColor.blue
+}

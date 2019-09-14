@@ -15,9 +15,10 @@ public class AccountsVC : UIViewController{
     var accountsProvider : AccountsProvider?
     var colorsThemeProvider : ThemeProvider?
     
-    //@IBOutlet weak var button_reload: UIButton!
+    @IBOutlet weak var button_reload: UIButton!
     @IBOutlet weak var tableview: UITableView!
 
+    @IBOutlet weak var buttonTheme: UIButton!
     
     @IBOutlet weak var labelTitle: UILabel!
     override public func viewDidLoad() {
@@ -28,7 +29,27 @@ public class AccountsVC : UIViewController{
         self.labelTitle.addShadow()
     }
     @IBAction func actionButton(_ sender: UIButton) {
-        //if sender == self.button_reload   { self.accountsProvider?.doFetchAccounts() }
+        if sender == self.button_reload   {
+            self.accountsProvider?.doFetchAccounts()
+        } else if sender == self.buttonTheme {
+            
+            let alert = UIAlertController(title: "Theme de couleur", message: "Veuillez choisir un thème de couleur", preferredStyle: UIAlertController.Style.alert)
+
+            alert.addAction(UIAlertAction(title: "Sombre", style: UIAlertAction.Style.default, handler: { alert in
+            
+                self.colorsThemeProvider?.doChangeToTheme(newtheme: DarkTheme())
+            }))
+            alert.addAction(UIAlertAction(title: "Clair", style: UIAlertAction.Style.default, handler: { alert in
+                self.colorsThemeProvider?.doChangeToTheme(newtheme: ClearTheme())
+
+            }))
+            alert.addAction(UIAlertAction(title: "Bleu", style: UIAlertAction.Style.default, handler: { alert in
+                self.colorsThemeProvider?.doChangeToTheme(newtheme: BlueTheme())
+
+            }))
+
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     override public var preferredStatusBarStyle : UIStatusBarStyle {
         return Store.shared.State_Theme.statusBarStyle ?? UIStatusBarStyle.default
@@ -154,21 +175,24 @@ extension AccountsVC  : AccountsView {
     func onStatus(newstate: ProviderStatus, message: String?) {
     
         OperationQueue.main.addOperation {
-            //self.label_info.text = message
 
             UIView.animate(withDuration: 0.1, delay: 0, options: [.beginFromCurrentState, .allowUserInteraction], animations: {
                 switch newstate {
                 case .loading:
-                    //self.button_reload.isEnabled = false
-                    //self.label_info.isHidden = false
+                    self.button_reload.isEnabled = false
                     break
                 case .error:
-                    //self.button_reload.isEnabled = true
-                    //self.label_info.isHidden = false
+                    self.button_reload.isEnabled = true
+                    let alert = UIAlertController(title: "Mise à jour impossible", message: "Error reseau", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Reesayer", style: UIAlertAction.Style.default, handler: {alert in
+                        self.accountsProvider?.doFetchAccounts()
+                    }))
+                    alert.addAction(UIAlertAction(title: "Annuler", style: UIAlertAction.Style.cancel, handler: nil))
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
                     break
                 case .updated:
-                    //self.button_reload.isEnabled = true
-                    //self.label_info.isHidden = true
+                    self.button_reload.isEnabled = true
                     self.tableview.reloadData()
                 }
             }, completion: nil)
@@ -181,7 +205,13 @@ extension AccountsVC : ThemeColorChangeCapable {
         self.tableview.backgroundColor = theme?.backgroundColor
         self.labelTitle.textColor = theme?.title_Color
         self.tabBarController?.tabBar.tintColor = theme?.image_tint_Color
+        self.buttonTheme.tintColor = theme?.image_tint_Color
+        
+        self.button_reload.backgroundColor = theme?.title_Color
+        self.button_reload.setTitleColor(theme?.normal_Color, for: .normal)
+
         self.setNeedsStatusBarAppearanceUpdate()
+        self.tableview.reloadData()
     }
 }
 

@@ -32,5 +32,7 @@ public class ThemeColorVCProvider : ThemeProvider {
     }
     public func doChangeToTheme(newtheme: ThemeProtocol) {
         Store.shared.State_Theme = newtheme
+        self.renderer?.onThemeUpdate(theme: Store.shared.State_Theme)
+
     }
 }

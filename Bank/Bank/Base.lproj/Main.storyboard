@@ -302,17 +302,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kQr-rW-ycn">
-                                <rect key="frame" x="5" y="144" width="414" height="669"/>
+                                <rect key="frame" x="5" y="144" width="404" height="669"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="yfi-JD-96J">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="589"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BankCell" id="FFv-Hk-buA" customClass="BankCell" customModule="Bank" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
+                                                <rect key="frame" x="0.0" y="55.333333333333343" width="404" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FFv-Hk-buA" id="Kin-fQ-8Je">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="404" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xce-Rd-hE2">
@@ -357,10 +357,10 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AccountCell" id="XO4-qu-b4e" customClass="AccountCell" customModule="Bank" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="99.333333333333343" width="414" height="44"/>
+                                                <rect key="frame" x="0.0" y="99.333333333333343" width="404" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XO4-qu-b4e" id="VSl-cN-uN4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="404" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xca-Fm-e4m">
@@ -410,16 +410,40 @@
                                             <outlet property="delegate" destination="wHs-6q-ewc" id="jVd-n7-JxG"/>
                                         </connections>
                                     </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzW-Bi-yzB">
+                                        <rect key="frame" x="0.0" y="609" width="404" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="zFS-iv-6q6"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="RjG-4v-LkB"/>
+                                        <state key="normal" title="Rafraichir">
+                                            <color key="titleColor" red="1" green="0.16622143079999999" blue="0.15711517480000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionButton:" destination="wHs-6q-ewc" eventType="touchUpInside" id="Qdh-Jt-BWY"/>
+                                            <action selector="actionButton:" destination="QdG-gy-OiA" eventType="touchUpInside" id="rq3-tC-vso"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-Ik-Vrr">
+                                <rect key="frame" x="346" y="69" width="48" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Theme"/>
+                                <connections>
+                                    <action selector="actionButton:" destination="wHs-6q-ewc" eventType="touchUpInside" id="d49-3y-gEz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="kQr-rW-ycn" secondAttribute="bottom" id="5vo-a8-c8m"/>
                             <constraint firstItem="4Bd-2X-dPv" firstAttribute="top" secondItem="yNc-Gr-eIt" secondAttribute="top" constant="10" id="HhV-aK-4Es"/>
                             <constraint firstItem="4Bd-2X-dPv" firstAttribute="leading" secondItem="yNc-Gr-eIt" secondAttribute="leading" constant="10" id="V2l-uV-6zK"/>
-                            <constraint firstItem="kQr-rW-ycn" firstAttribute="trailing" secondItem="yNc-Gr-eIt" secondAttribute="trailing" constant="5" id="pma-0g-Oxi"/>
+                            <constraint firstItem="yNc-Gr-eIt" firstAttribute="trailing" secondItem="jhY-Ik-Vrr" secondAttribute="trailing" constant="20" id="WlB-PB-fZt"/>
+                            <constraint firstItem="kQr-rW-ycn" firstAttribute="trailing" secondItem="yNc-Gr-eIt" secondAttribute="trailing" constant="-5" id="pma-0g-Oxi"/>
                             <constraint firstItem="kQr-rW-ycn" firstAttribute="leading" secondItem="yNc-Gr-eIt" secondAttribute="leading" constant="5" id="rZ2-QR-WDT"/>
+                            <constraint firstItem="jhY-Ik-Vrr" firstAttribute="centerY" secondItem="4Bd-2X-dPv" secondAttribute="centerY" id="riI-GK-E43"/>
                             <constraint firstItem="kQr-rW-ycn" firstAttribute="top" secondItem="4Bd-2X-dPv" secondAttribute="bottom" constant="30" id="si0-4r-q4d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yNc-Gr-eIt"/>
@@ -428,6 +452,8 @@
                         <barButtonItem key="backBarButtonItem" title="Mes Comptes" id="HQd-t4-uSQ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonTheme" destination="jhY-Ik-Vrr" id="I3a-fX-lse"/>
+                        <outlet property="button_reload" destination="NzW-Bi-yzB" id="PvS-sv-Q4B"/>
                         <outlet property="labelTitle" destination="4Bd-2X-dPv" id="hIP-cn-vmw"/>
                         <outlet property="tableview" destination="yfi-JD-96J" id="JiL-a0-mCZ"/>
                     </connections>
