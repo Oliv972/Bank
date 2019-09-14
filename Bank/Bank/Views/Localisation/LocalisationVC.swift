@@ -85,10 +85,8 @@ extension LocalisationVC : UICollectionViewDataSource{
         if let ano = locationPresenter?.raw_atm_data[indexPath.row].address{
             cell.labelSubTitle.text = ano
         }
-        if let ano = locationPresenter?.raw_atm_data[indexPath.row].type{
-            
-            
-        }
+       
+        
         return cell
     }
 }
