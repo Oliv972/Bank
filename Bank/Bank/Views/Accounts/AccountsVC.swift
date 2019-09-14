@@ -22,6 +22,7 @@ public class AccountsVC : UIViewController{
     @IBOutlet weak var labelTitle: UILabel!
     override public func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         self.accountsProvider = AccountsProvider(with: self)
         self.colorsThemeProvider = ThemeColorVCProvider(vc: self)
         self.labelTitle.addShadow()
@@ -29,10 +30,8 @@ public class AccountsVC : UIViewController{
     @IBAction func actionButton(_ sender: UIButton) {
         //if sender == self.button_reload   { self.accountsProvider?.doFetchAccounts() }
     }
-    
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
+    override public var preferredStatusBarStyle : UIStatusBarStyle {
+        return Store.shared.State_Theme.statusBarStyle ?? UIStatusBarStyle.default
     }
 }
 
@@ -47,7 +46,7 @@ extension AccountsVC  : UITableViewDelegate  {
     
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let vw = UILabel()
-        vw.textColor = Store.shared.State_Theme.mainColor
+        vw.textColor = Store.shared.State_Theme.heading_1_Color
         vw.backgroundColor = UIColor.clear
         vw.font =  UIFont(name: "HelveticaNeue-Medium", size: 16.0)!
         vw.addShadow()
@@ -116,12 +115,14 @@ extension AccountsVC  : UITableViewDataSource{
             if(data.isBankCell){
                 let cell = tableView.dequeueReusableCell(withIdentifier: BankCell.Identifier(), for: indexPath) as! BankCell
                 cell.label_info.text = data.title
-                cell.label_amount.text = data.amount 
+                cell.label_amount.text = data.amount
+                cell.image_cheron.isHighlighted = data.idBank != viewmodel.currentSelectedBank
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCell(withIdentifier: AccountCell.Identifier(), for: indexPath) as! AccountCell
                 cell.label_info.text = data.title
                 cell.label_amount.text = data.amount
+                cell.image_cheron.isHighlighted = data.idBank != viewmodel.currentSelectedBank
                 return cell
             }
             
@@ -178,7 +179,9 @@ extension AccountsVC : ThemeColorChangeCapable {
     public func onThemeUpdate(theme: ThemeProtocol?) {
         self.view.backgroundColor = theme?.backgroundColor
         self.tableview.backgroundColor = theme?.backgroundColor
-        self.labelTitle.textColor = theme?.mainColor
+        self.labelTitle.textColor = theme?.title_Color
+        self.tabBarController?.tabBar.tintColor = theme?.image_tint_Color
+        self.setNeedsStatusBarAppearanceUpdate()
     }
 }
 

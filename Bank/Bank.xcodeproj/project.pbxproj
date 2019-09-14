@@ -37,6 +37,7 @@
 		3FE7E0FC23292F53001AE272 /* BankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0FB23292F53001AE272 /* BankCell.swift */; };
 		3FE7E0FE2329374A001AE272 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0FD2329374A001AE272 /* AccountCell.swift */; };
 		3FE7E10023293ACB001AE272 /* String+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7E0FF23293ACB001AE272 /* String+Currency.swift */; };
+		3FFF15F7232CE1000053AF56 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF15F6232CE1000053AF56 /* LocationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		3FE7E0FB23292F53001AE272 /* BankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCell.swift; sourceTree = "<group>"; };
 		3FE7E0FD2329374A001AE272 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		3FE7E0FF23293ACB001AE272 /* String+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Currency.swift"; sourceTree = "<group>"; };
+		3FFF15F6232CE1000053AF56 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				3F76F4C6232B83E000D379AE /* Presenter */,
 				3F60ADCB232A482D00073DB0 /* LocalisationVC.swift */,
+				3FFF15F6232CE1000053AF56 /* LocationCell.swift */,
 			);
 			path = Localisation;
 			sourceTree = "<group>";
@@ -200,11 +203,11 @@
 		3FE7E0E82328EC82001AE272 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3FE6758F232BC15000F5EBB1 /* ThemeProvider.swift */,
 				3FE67587232B9F3600F5EBB1 /* Settings */,
 				3F60ADD0232A48B000073DB0 /* Localisation */,
 				3F60ADCF232A489600073DB0 /* Simulation */,
 				3F60ADCD232A487400073DB0 /* Accounts */,
-				3FE6758F232BC15000F5EBB1 /* ThemeProvider.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				3F60ADC4232A302900073DB0 /* String+DateTimeStamp.swift in Sources */,
 				3FE7E0FC23292F53001AE272 /* BankCell.swift in Sources */,
 				3FE7E10023293ACB001AE272 /* String+Currency.swift in Sources */,
+				3FFF15F7232CE1000053AF56 /* LocationCell.swift in Sources */,
 				3FE7E0FE2329374A001AE272 /* AccountCell.swift in Sources */,
 				3F76F4C8232B849F00D379AE /* ATMLocatorPresenter.swift in Sources */,
 				3F60ADD4232A4F2400073DB0 /* SimulationCalculatorPresenter.swift in Sources */,

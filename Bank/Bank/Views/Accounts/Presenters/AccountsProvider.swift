@@ -40,7 +40,7 @@ public final class AccountsProvider{
     public var tableviewCAData    : [AccountsUIData] = []
     public var tableviewOtherData : [AccountsUIData] = []
     
-    private var currentSelectedBank : String? = ""
+    public var currentSelectedBank : String? = ""
 
     
     init(with viewcontroller : AccountsView) {
@@ -66,11 +66,7 @@ public final class AccountsProvider{
             }
             
             do{
-                let string = String.init(bytes: data, encoding: .utf8)!
-                print(string)
-                
-                let decoder = JSONDecoder()
-                self.raw_accounts = try decoder.decode([AccountList].self, from: data)
+                self.raw_accounts = try JSONDecoder().decode([AccountList].self, from: data)
                 self.loadDataForViewController()
             } catch  {
                 let string_error = error.localizedDescription

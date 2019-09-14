@@ -12,6 +12,7 @@ import Foundation
 
 protocol LocatorPresenter {
     func doFetchATMLocations()
+    var raw_atm_data : [ATM] { get }
 }
 
 public protocol LocationViewer : NSObjectProtocol{
@@ -20,8 +21,9 @@ public protocol LocationViewer : NSObjectProtocol{
 }
 
 public class VISAATMLocatorPresenter : LocatorPresenter {
+    
     private weak var renderer : LocationViewer?
-    var raw_atm_data : [ATM]? = nil
+    public var raw_atm_data : [ATM] = []
     
     public init(view : LocationViewer){
         self.renderer = view
@@ -51,11 +53,12 @@ public class VISAATMLocatorPresenter : LocatorPresenter {
     
     
     func doBuildInfosForUI(){
-        guard let list = self.raw_atm_data else { return }
-        for atm in list {
-            self.renderer?.clearPoints()
-            self.renderer?.addBank(atLatitude: atm.latitude, longitude: atm.longitude, name: atm.bank_name)
+        self.renderer?.clearPoints()
+
+        for atm in self.raw_atm_data {
+            OperationQueue.main.addOperation {
+                self.renderer?.addBank(atLatitude: atm.latitude, longitude: atm.longitude, name: atm.bank_name)
+            }
         }
     }
-    
 }

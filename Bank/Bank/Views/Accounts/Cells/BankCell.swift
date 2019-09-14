@@ -34,7 +34,8 @@ public class BankCell : UITableViewCell{
 extension BankCell : ThemeColorChangeCapable {
     public func onThemeUpdate(theme: ThemeProtocol?) {
         self.contentView.backgroundColor = theme?.backgroundColor
-        self.label_info.textColor = theme?.mainColor
-        self.label_amount.textColor = theme?.secondColor
+        self.label_info.textColor   = theme?.subtitle_Color
+        self.label_amount.textColor = theme?.normal_Color
+        self.image_cheron.tintColor = theme?.image_tint_Color
     }
 }

@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
 
 public protocol ThemeProvider {
     func doChangeToTheme(newtheme : ThemeProtocol)
@@ -18,7 +20,6 @@ public protocol ThemeColorChangeCapable : NSObjectProtocol{
 }
 
 public class ThemeColorVCProvider : ThemeProvider {
-   
     init(vc : ThemeColorChangeCapable){
         self.renderer = vc
         self.renderer?.onThemeUpdate(theme: Store.shared.State_Theme)

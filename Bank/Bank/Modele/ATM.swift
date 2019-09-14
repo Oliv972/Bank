@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct ATM : Codable{
+public struct ATM : Codable{
     let latitude : Double
     let longitude : Double
     let bank_name : String?

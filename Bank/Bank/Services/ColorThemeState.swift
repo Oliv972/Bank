@@ -11,18 +11,32 @@ import UIKit
 
 public protocol ThemeProtocol {
     var backgroundColor : UIColor? { get }
-    var mainColor       : UIColor? { get }
-    var secondColor     : UIColor? { get }
-    var thirdColor      : UIColor? { get }
+    var contrastedBackgroundColor : UIColor? { get }
 
+    
+    var title_Color       : UIColor? { get }
+    var subtitle_Color    : UIColor? { get }
+    var normal_Color      : UIColor? { get }
+
+    var heading_1_Color   : UIColor? { get }
+    var heading_2_Color   : UIColor? { get }
+    var image_tint_Color  : UIColor? { get }
+
+    var statusBarStyle    : UIStatusBarStyle? { get }
 }
 
 
 class DarkTheme: ThemeProtocol {
-    var backgroundColor: UIColor? = UIColor(named: "Color-Blackboard")
-    var mainColor      : UIColor? = UIColor(named: "Color-Grain")
-    var secondColor    : UIColor? = UIColor(named: "Color-Tan")
-    var thirdColor     : UIColor? = UIColor(named: "Color-Oxblood")
-
     
+    var statusBarStyle: UIStatusBarStyle? = .lightContent
+    
+    var backgroundColor          : UIColor? = UIColor(named: "Color-DarkGray")
+    var contrastedBackgroundColor: UIColor? = UIColor(named: "Color-Gray")
+    
+    var title_Color              : UIColor? = UIColor(named: "Color-Red")
+    var subtitle_Color           : UIColor? = UIColor(named: "Color-Gray")
+    var heading_1_Color          : UIColor? = UIColor(named: "Color-White")
+    var heading_2_Color          : UIColor? = UIColor(named: "Color-DarkGray")
+    var normal_Color             : UIColor? = UIColor(named: "Color-White")
+    var image_tint_Color         : UIColor? = UIColor(named: "Color-Red")
 }

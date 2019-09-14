@@ -14,20 +14,26 @@ public class AccountDetailVC : UIViewController {
     public var account : Account?
     
     var accountDetailProvider : AccountsDetailProvider?
+    var colorsThemeProvider : ThemeProvider?
 
     @IBOutlet weak var labelAmount: UILabel!
     @IBOutlet weak var labelAccountName: UILabel!
     @IBOutlet weak var tableviewoperation: UITableView!
-    
+    @IBOutlet weak var backButton: UIButton!
+
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.accountDetailProvider = AccountsDetailProvider(with: self, with: account )
+        self.colorsThemeProvider = ThemeColorVCProvider(vc: self)
     }
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
+    
+    @IBAction func actionButton(_ sender: UIButton) {
+        if sender == self.backButton{
+            self.navigationController?.popViewController(animated: true)
+        }
     }
+    
 }
 
 extension AccountDetailVC : AccountDetailView {
@@ -60,10 +66,21 @@ extension AccountDetailVC : UITableViewDataSource {
         
         let data = viewmodel.tableviewData[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Operation", for: indexPath) as! OperationCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: OperationCell.Identifier(), for: indexPath) as! OperationCell
         cell.label_title.text = data.operation_title
         cell.label_amount.text = data.operation_amount
         cell.label_date.text = data.operation_date
         return cell
+    }
+}
+extension AccountDetailVC : ThemeColorChangeCapable {
+    public func onThemeUpdate(theme: ThemeProtocol?) {
+        self.view.backgroundColor = theme?.backgroundColor
+        self.tableviewoperation.backgroundColor = theme?.backgroundColor
+        self.labelAmount.textColor = theme?.title_Color
+        self.labelAccountName.textColor = theme?.heading_1_Color
+        self.backButton.backgroundColor = theme?.title_Color
+        self.backButton.setTitleColor(theme?.normal_Color, for: .normal)
+
     }
 }
