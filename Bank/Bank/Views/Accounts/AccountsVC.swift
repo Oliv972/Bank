@@ -176,7 +176,7 @@ extension AccountsVC  : AccountsView {
     
         OperationQueue.main.addOperation {
 
-            UIView.animate(withDuration: 0.1, delay: 0, options: [.beginFromCurrentState, .allowUserInteraction], animations: {
+            UIView.animate(withDuration: 0.5, delay: 0, options: [.beginFromCurrentState, .allowUserInteraction], animations: {
                 switch newstate {
                 case .loading:
                     self.button_reload.isEnabled = false
@@ -193,6 +193,7 @@ extension AccountsVC  : AccountsView {
                     break
                 case .updated:
                     self.button_reload.isEnabled = true
+                    
                     self.tableview.reloadData()
                 }
             }, completion: nil)

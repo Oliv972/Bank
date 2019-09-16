@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				3F60ADCE232A488800073DB0 /* Cells */,
-				3FE7E0F12328EE1D001AE272 /* Presenters */,
+				3FE7E0F12328EE1D001AE272 /* Providers */,
 				3FE7E0ED2328ECD3001AE272 /* AccountsVC.swift */,
 				3FE7E0EF2328ECDF001AE272 /* AccountDetailVC.swift */,
 			);
@@ -235,13 +235,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		3FE7E0F12328EE1D001AE272 /* Presenters */ = {
+		3FE7E0F12328EE1D001AE272 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
 				3FE7E0F62328F540001AE272 /* AccountsProvider.swift */,
 				3F60ADBF23294FA100073DB0 /* AccountDetailProvider.swift */,
 			);
-			path = Presenters;
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		3FE7E0FA232911BE001AE272 /* Extensions */ = {
@@ -520,7 +520,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.olivier.bank.Bank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -538,7 +538,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.olivier.bank.Bank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

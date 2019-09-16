@@ -128,7 +128,7 @@ public final class AccountsProvider{
                                                 idAccount: nil,
                                                 idOperation: nil,
                                                 title: bankAccount.title,
-                                                amount: bankAccount.amount,
+                                                amount: bankAccount.amount.formatToCurrency(),
                                                 isBankCell: true))
                 
                 if isExpanded {
@@ -137,7 +137,7 @@ public final class AccountsProvider{
                                                         idAccount: account.id,
                                                         idOperation: nil,
                                                         title: account.title,
-                                                        amount: account.amount,
+                                                        amount: account.amount.formatToCurrency(),
                                                         isBankCell: false))
                     }
                 }

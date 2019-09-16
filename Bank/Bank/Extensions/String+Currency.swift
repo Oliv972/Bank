@@ -14,7 +14,7 @@ extension String {
             let number = NSNumber(value:convert)
             return NumberFormatter.localizedString(from: number, number: .currency)
         }else {
-            return "###"
+            return "\(self) €"
         }
     }
 }
